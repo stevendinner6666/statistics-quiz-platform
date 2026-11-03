@@ -1,0 +1,2192 @@
+{
+  "subject": "統計學",
+  "chapter": "Ch1",
+  "title": "Data and Statistics",
+  "source": "Ch1.pdf",
+  "questions": [
+    {
+      "id": 1,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Different methods of developing useful information from large data bases are dealt with under",
+      "options": [
+        {
+          "value": "A",
+          "label": "data manipulation."
+        },
+        {
+          "value": "B",
+          "label": "data warehousing."
+        },
+        {
+          "value": "C",
+          "label": "big data."
+        },
+        {
+          "value": "D",
+          "label": "data mining."
+        }
+      ],
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 2,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "The process of capturing, storing, and maintaining data is known as",
+      "options": [
+        {
+          "value": "A",
+          "label": "data manipulation."
+        },
+        {
+          "value": "B",
+          "label": "data mining."
+        },
+        {
+          "value": "C",
+          "label": "data warehousing."
+        },
+        {
+          "value": "D",
+          "label": "big data."
+        }
+      ],
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 3,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "The subject of data mining deals with",
+      "options": [
+        {
+          "value": "A",
+          "label": "methods for developing useful decision-making information from large data bases."
+        },
+        {
+          "value": "B",
+          "label": "keeping data secure so that unauthorized individuals cannot access the data."
+        },
+        {
+          "value": "C",
+          "label": "computational procedure for data analysis."
+        },
+        {
+          "value": "D",
+          "label": "computing the average for data."
+        }
+      ],
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 4,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "In a questionnaire, respondents are asked to mark their gender as male or female. The scale of measurement for gender is _____ scale.",
+      "options": [
+        {
+          "value": "A",
+          "label": "ordinal"
+        },
+        {
+          "value": "B",
+          "label": "nominal"
+        },
+        {
+          "value": "C",
+          "label": "ratio"
+        },
+        {
+          "value": "D",
+          "label": "interval"
+        }
+      ],
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 5,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "The scale of measurement that is used to rank order the observation for a variable is called the _____ scale.",
+      "options": [
+        {
+          "value": "A",
+          "label": "ratio"
+        },
+        {
+          "value": "B",
+          "label": "ordinal"
+        },
+        {
+          "value": "C",
+          "label": "nominal"
+        },
+        {
+          "value": "D",
+          "label": "interval"
+        }
+      ],
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 6,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "A restaurant asks their customers to fill out a questionnaire indicating whether their service was excellent, very good, good, or poor. The rating scale used is an example of the _____ scale.",
+      "options": [
+        {
+          "value": "A",
+          "label": "ordinal"
+        },
+        {
+          "value": "B",
+          "label": "ratio"
+        },
+        {
+          "value": "C",
+          "label": "nominal Name: Class: Date: Ch. 01: Data and Statistics"
+        },
+        {
+          "value": "D",
+          "label": "interval"
+        }
+      ],
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 7,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "The data measured on ordinal scale exhibits all the properties of data measured on",
+      "options": [
+        {
+          "value": "A",
+          "label": "ratio scale."
+        },
+        {
+          "value": "B",
+          "label": "interval scale."
+        },
+        {
+          "value": "C",
+          "label": "nominal scale."
+        },
+        {
+          "value": "D",
+          "label": "nominal and interval scales."
+        }
+      ],
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 8,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Measurement of body temperature is an example of a variable that uses",
+      "options": [
+        {
+          "value": "A",
+          "label": "the ratio scale."
+        },
+        {
+          "value": "B",
+          "label": "the interval scale."
+        },
+        {
+          "value": "C",
+          "label": "the ordinal scale."
+        },
+        {
+          "value": "D",
+          "label": "either the ratio or the ordinal scale."
+        }
+      ],
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 9,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Arithmetic operations provide meaningful results for variables that",
+      "options": [
+        {
+          "value": "A",
+          "label": "use any scale of measurement except nominal and ordinal."
+        },
+        {
+          "value": "B",
+          "label": "appear as non-numerical values."
+        },
+        {
+          "value": "C",
+          "label": "are quantitative."
+        },
+        {
+          "value": "D",
+          "label": "have non-negative values."
+        }
+      ],
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 10,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Height is an example of a variable that uses the _____ scale.",
+      "options": [
+        {
+          "value": "A",
+          "label": "ratio"
+        },
+        {
+          "value": "B",
+          "label": "interval"
+        },
+        {
+          "value": "C",
+          "label": "nominal"
+        },
+        {
+          "value": "D",
+          "label": "ordinal"
+        }
+      ],
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 11,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Data measured in a nominal scale",
+      "options": [
+        {
+          "value": "A",
+          "label": "must be alphabetic."
+        },
+        {
+          "value": "B",
+          "label": "can be either numeric or nonnumeric."
+        },
+        {
+          "value": "C",
+          "label": "must be numeric."
+        },
+        {
+          "value": "D",
+          "label": "must rank order the data."
+        }
+      ],
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 12,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "The scale of measurement that has an inherent zero value defined is the _____ scale.",
+      "options": [
+        {
+          "value": "A",
+          "label": "ratio"
+        },
+        {
+          "value": "B",
+          "label": "nominal"
+        },
+        {
+          "value": "C",
+          "label": "ordinal"
+        },
+        {
+          "value": "D",
+          "label": "interval Name: Class: Date: Ch. 01: Data and Statistics"
+        }
+      ],
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 13,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "The measurement scale suitable for quantitative data is _____ scale.",
+      "options": [
+        {
+          "value": "A",
+          "label": "the ordinal"
+        },
+        {
+          "value": "B",
+          "label": "the nominal"
+        },
+        {
+          "value": "C",
+          "label": "either the interval or ratio"
+        },
+        {
+          "value": "D",
+          "label": "only the interval"
+        }
+      ],
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 14,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Data are",
+      "options": [
+        {
+          "value": "A",
+          "label": "always numeric."
+        },
+        {
+          "value": "B",
+          "label": "always non-numeric."
+        },
+        {
+          "value": "C",
+          "label": "the raw material of statistics."
+        },
+        {
+          "value": "D",
+          "label": "always categorical."
+        }
+      ],
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 15,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "The entities on which data are collected are",
+      "options": [
+        {
+          "value": "A",
+          "label": "elements."
+        },
+        {
+          "value": "B",
+          "label": "populations."
+        },
+        {
+          "value": "C",
+          "label": "samples."
+        },
+        {
+          "value": "D",
+          "label": "observations."
+        }
+      ],
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 16,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "The set of measurements collected for a particular element are called",
+      "options": [
+        {
+          "value": "A",
+          "label": "variables."
+        },
+        {
+          "value": "B",
+          "label": "observations."
+        },
+        {
+          "value": "C",
+          "label": "samples."
+        },
+        {
+          "value": "D",
+          "label": "populations."
+        }
+      ],
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 17,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "A characteristic of interest for the elements is called a",
+      "options": [
+        {
+          "value": "A",
+          "label": "sample."
+        },
+        {
+          "value": "B",
+          "label": "data set."
+        },
+        {
+          "value": "C",
+          "label": "variable."
+        },
+        {
+          "value": "D",
+          "label": "quality."
+        }
+      ],
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 18,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "All the data collected in a particular study are referred to as the",
+      "options": [
+        {
+          "value": "A",
+          "label": "sample."
+        },
+        {
+          "value": "B",
+          "label": "variable."
+        },
+        {
+          "value": "C",
+          "label": "data set."
+        },
+        {
+          "value": "D",
+          "label": "population."
+        }
+      ],
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 19,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Quantitative data",
+      "options": [
+        {
+          "value": "A",
+          "label": "are always non-numeric."
+        },
+        {
+          "value": "B",
+          "label": "may be either numeric or non-numeric."
+        },
+        {
+          "value": "C",
+          "label": "are always numeric."
+        },
+        {
+          "value": "D",
+          "label": "are never numeric."
+        }
+      ],
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 20,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "In a questionnaire, respondents are asked to mark their marital status as single, married, divorced, or widowed. Marital status is an example of a(n) _____ variable.",
+      "options": [
+        {
+          "value": "A",
+          "label": "categorical"
+        },
+        {
+          "value": "B",
+          "label": "quantitative"
+        },
+        {
+          "value": "C",
+          "label": "interval-scale"
+        },
+        {
+          "value": "D",
+          "label": "ordinal-scale"
+        }
+      ],
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 21,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "The number of observations will always be the same as the",
+      "options": [
+        {
+          "value": "A",
+          "label": "number of variables."
+        },
+        {
+          "value": "B",
+          "label": "number of elements."
+        },
+        {
+          "value": "C",
+          "label": "population size."
+        },
+        {
+          "value": "D",
+          "label": "sample size."
+        }
+      ],
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 22,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Categorical data",
+      "options": [
+        {
+          "value": "A",
+          "label": "must be numeric."
+        },
+        {
+          "value": "B",
+          "label": "must be nonnumeric."
+        },
+        {
+          "value": "C",
+          "label": "cannot be numeric."
+        },
+        {
+          "value": "D",
+          "label": "may be either numeric or nonnumeric."
+        }
+      ],
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 23,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Categorical data",
+      "options": [
+        {
+          "value": "A",
+          "label": "indicate either how much or how many."
+        },
+        {
+          "value": "B",
+          "label": "cannot be numeric"
+        },
+        {
+          "value": "C",
+          "label": "are labels used to identify attributes of elements."
+        },
+        {
+          "value": "D",
+          "label": "must be nonnumeric."
+        }
+      ],
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 24,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Ordinary arithmetic operations are meaningful",
+      "options": [
+        {
+          "value": "A",
+          "label": "only with categorical data."
+        },
+        {
+          "value": "B",
+          "label": "only with quantitative data."
+        },
+        {
+          "value": "C",
+          "label": "either with quantitative or categorical data."
+        },
+        {
+          "value": "D",
+          "label": "with neither quantitative nor categorical data."
+        }
+      ],
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 25,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "A student’s dormitory room number is an example of",
+      "options": [
+        {
+          "value": "A",
+          "label": "a quantitative variable."
+        },
+        {
+          "value": "B",
+          "label": "either a quantitative or a categorical variable."
+        },
+        {
+          "value": "C",
+          "label": "an exchange variable."
+        },
+        {
+          "value": "D",
+          "label": "a categorical variable."
+        }
+      ],
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 26,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Goals scored in a soccer game is an example of",
+      "options": [
+        {
+          "value": "A",
+          "label": "a categorical variable."
+        },
+        {
+          "value": "B",
+          "label": "a quantitative variable."
+        },
+        {
+          "value": "C",
+          "label": "either a quantitative or categorical variable."
+        },
+        {
+          "value": "D",
+          "label": "neither a quantitative nor categorical variable."
+        }
+      ],
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 27,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "For ease of data entry into a university database, 1 denotes that the student is a freshman, 2 indicates a sophomore, 3 indicates a junior, and 4 indicates that the student is a senior. In this case, data are",
+      "options": [
+        {
+          "value": "A",
+          "label": "categorical."
+        },
+        {
+          "value": "B",
+          "label": "quantitative."
+        },
+        {
+          "value": "C",
+          "label": "either categorical or quantitative."
+        },
+        {
+          "value": "D",
+          "label": "neither categorical nor quantitative."
+        }
+      ],
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 28,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Arithmetic operations are inappropriate for",
+      "options": [
+        {
+          "value": "A",
+          "label": "categorical data."
+        },
+        {
+          "value": "B",
+          "label": "quantitative data."
+        },
+        {
+          "value": "C",
+          "label": "both categorical and quantitative data."
+        },
+        {
+          "value": "D",
+          "label": "large data sets."
+        }
+      ],
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 29,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Cost of a theater ticket is an example of",
+      "options": [
+        {
+          "value": "A",
+          "label": "categorical data."
+        },
+        {
+          "value": "B",
+          "label": "either categorical or quantitative data."
+        },
+        {
+          "value": "C",
+          "label": "nominal data."
+        },
+        {
+          "value": "D",
+          "label": "quantitative data."
+        }
+      ],
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 30,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Data collected at the same, or approximately the same point in time are _____ data.",
+      "options": [
+        {
+          "value": "A",
+          "label": "time series"
+        },
+        {
+          "value": "B",
+          "label": "approximate time series"
+        },
+        {
+          "value": "C",
+          "label": "cross-sectional"
+        },
+        {
+          "value": "D",
+          "label": "approximate"
+        }
+      ],
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 31,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Data collected over several time periods are _____ data. Name: Class: Date: Ch. 01: Data and Statistics",
+      "options": [
+        {
+          "value": "A",
+          "label": "time series"
+        },
+        {
+          "value": "B",
+          "label": "time controlled"
+        },
+        {
+          "value": "C",
+          "label": "cross-sectional"
+        },
+        {
+          "value": "D",
+          "label": "periodic"
+        }
+      ],
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 32,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Statistical studies in which researchers do not control variables of interest are _____ studies.",
+      "options": [
+        {
+          "value": "A",
+          "label": "experimental"
+        },
+        {
+          "value": "B",
+          "label": "random variable"
+        },
+        {
+          "value": "C",
+          "label": "inferential"
+        },
+        {
+          "value": "D",
+          "label": "observational"
+        }
+      ],
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 33,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Statistical studies in which researchers control variables of interest are _____ studies.",
+      "options": [
+        {
+          "value": "A",
+          "label": "experimental"
+        },
+        {
+          "value": "B",
+          "label": "random variable"
+        },
+        {
+          "value": "C",
+          "label": "inferential"
+        },
+        {
+          "value": "D",
+          "label": "observational"
+        }
+      ],
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 34,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "The summaries of data, which may be tabular, graphical, or numerical, are referred to as _____ statistics.",
+      "options": [
+        {
+          "value": "A",
+          "label": "inferential"
+        },
+        {
+          "value": "B",
+          "label": "descriptive"
+        },
+        {
+          "value": "C",
+          "label": "observational"
+        },
+        {
+          "value": "D",
+          "label": "experimental"
+        }
+      ],
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 35,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Statistical inference",
+      "options": [
+        {
+          "value": "A",
+          "label": "refers to the process of drawing inferences about the sample based on the characteristics of the population."
+        },
+        {
+          "value": "B",
+          "label": "is the same as descriptive statistics."
+        },
+        {
+          "value": "C",
+          "label": "is the process of drawing inferences about the population based on the information taken from the sample."
+        },
+        {
+          "value": "D",
+          "label": "is the same as a census."
+        }
+      ],
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 36,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "The collection of all elements of interest in a study is",
+      "options": [
+        {
+          "value": "A",
+          "label": "the population."
+        },
+        {
+          "value": "B",
+          "label": "the sample."
+        },
+        {
+          "value": "C",
+          "label": "a survey."
+        },
+        {
+          "value": "D",
+          "label": "a census."
+        }
+      ],
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 37,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "A portion selected to represent the whole is called a",
+      "options": [
+        {
+          "value": "A",
+          "label": "survey."
+        },
+        {
+          "value": "B",
+          "label": "population. Name: Class: Date: Ch. 01: Data and Statistics"
+        },
+        {
+          "value": "C",
+          "label": "census."
+        },
+        {
+          "value": "D",
+          "label": "sample."
+        }
+      ],
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 38,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "In a sample of 800 students in a university, 240 or 30% are Business majors. The 30% is an example of",
+      "options": [
+        {
+          "value": "A",
+          "label": "a sample."
+        },
+        {
+          "value": "B",
+          "label": "a population."
+        },
+        {
+          "value": "C",
+          "label": "statistical inference."
+        },
+        {
+          "value": "D",
+          "label": "descriptive statistics."
+        }
+      ],
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 39,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "In a sample of 400 students in a university, 80 or 20% are Business majors. Based on the above information, the school's paper reported that \"20% of all the students at the university are Business majors.\" This report is an example of",
+      "options": [
+        {
+          "value": "A",
+          "label": "a sample."
+        },
+        {
+          "value": "B",
+          "label": "a population."
+        },
+        {
+          "value": "C",
+          "label": "statistical inference."
+        },
+        {
+          "value": "D",
+          "label": "descriptive statistics."
+        }
+      ],
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 40,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Five hundred residents of a city with a population of 240,495 are polled to obtain information on voting intentions in an upcoming city election. The five hundred residents in this study is an example of a(n)",
+      "options": [
+        {
+          "value": "A",
+          "label": "census."
+        },
+        {
+          "value": "B",
+          "label": "sample."
+        },
+        {
+          "value": "C",
+          "label": "observation."
+        },
+        {
+          "value": "D",
+          "label": "population."
+        }
+      ],
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 41,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "A statistics professor asked students in a class their ages. Based on this information, the professor states that the average age of all the students in the university is 24 years. This is an example of",
+      "options": [
+        {
+          "value": "A",
+          "label": "an observational study."
+        },
+        {
+          "value": "B",
+          "label": "descriptive statistics."
+        },
+        {
+          "value": "C",
+          "label": "an experiment."
+        },
+        {
+          "value": "D",
+          "label": "statistical inference."
+        }
+      ],
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 42,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "The owner of a factory regularly requests a graphical summary of all employees' salaries. The graphical summary of salaries is an example of _____ statistics.",
+      "options": [
+        {
+          "value": "A",
+          "label": "inferential"
+        },
+        {
+          "value": "B",
+          "label": "descriptive"
+        },
+        {
+          "value": "C",
+          "label": "experimental"
+        },
+        {
+          "value": "D",
+          "label": "observational"
+        }
+      ],
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 43,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "The Department of Transportation of a city has calculated that on the average there are 17 accidents per day. The average number of accidents is an example of Name: Class: Date: Ch. 01: Data and Statistics",
+      "options": [
+        {
+          "value": "A",
+          "label": "descriptive statistics."
+        },
+        {
+          "value": "B",
+          "label": "statistical inference."
+        },
+        {
+          "value": "C",
+          "label": "a sample."
+        },
+        {
+          "value": "D",
+          "label": "a population."
+        }
+      ],
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 44,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "The process of analyzing sample data in order to draw conclusions about the characteristics of a population is called",
+      "options": [
+        {
+          "value": "A",
+          "label": "descriptive statistics."
+        },
+        {
+          "value": "B",
+          "label": "statistical inference."
+        },
+        {
+          "value": "C",
+          "label": "data analysis."
+        },
+        {
+          "value": "D",
+          "label": "data summarization."
+        }
+      ],
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 45,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "In a post office, the mailboxes are numbered from 1 to 4,500. These numbers represent",
+      "options": [
+        {
+          "value": "A",
+          "label": "categorical data."
+        },
+        {
+          "value": "B",
+          "label": "quantitative data."
+        },
+        {
+          "value": "C",
+          "label": "either categorical or quantitative data."
+        },
+        {
+          "value": "D",
+          "label": "since the numbers are sequential, the data is quantitative."
+        }
+      ],
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 46,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "The average age in a sample of 190 students at City College is 22. As a result of this sample, it can be concluded that the average age of all the students at City College",
+      "options": [
+        {
+          "value": "A",
+          "label": "must be more than 22, since the population is always larger than the sample."
+        },
+        {
+          "value": "B",
+          "label": "must be less than 22, since the sample is only a part of the population."
+        },
+        {
+          "value": "C",
+          "label": "could not be 22."
+        },
+        {
+          "value": "D",
+          "label": "is around 22."
+        }
+      ],
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 47,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Since a sample is a subset of the population, the sample mean _____ the mean of the population.",
+      "options": [
+        {
+          "value": "A",
+          "label": "is always smaller than"
+        },
+        {
+          "value": "B",
+          "label": "is always larger than"
+        },
+        {
+          "value": "C",
+          "label": "must be equal to"
+        },
+        {
+          "value": "D",
+          "label": "varies around"
+        }
+      ],
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 48,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "The scale of measurement used for variable data that is simply a label for the purpose of identifying the attribute of an element is the _____ scale.",
+      "options": [
+        {
+          "value": "A",
+          "label": "ratio"
+        },
+        {
+          "value": "B",
+          "label": "nominal"
+        },
+        {
+          "value": "C",
+          "label": "ordinal"
+        },
+        {
+          "value": "D",
+          "label": "interval"
+        }
+      ],
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 49,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "In a data set, the number of elements will always be the same as the number of Name: Class: Date: Ch. 01: Data and Statistics",
+      "options": [
+        {
+          "value": "A",
+          "label": "independent variables."
+        },
+        {
+          "value": "B",
+          "label": "observations."
+        },
+        {
+          "value": "C",
+          "label": "data points."
+        },
+        {
+          "value": "D",
+          "label": "dependent variables."
+        }
+      ],
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 50,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Which of the following is not a scale of measurement?",
+      "options": [
+        {
+          "value": "A",
+          "label": "Nominal"
+        },
+        {
+          "value": "B",
+          "label": "Ordinal"
+        },
+        {
+          "value": "C",
+          "label": "Interval"
+        },
+        {
+          "value": "D",
+          "label": "Observational"
+        }
+      ],
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 51,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Which of the following is a scale of measurement?",
+      "options": [
+        {
+          "value": "A",
+          "label": "Ratio"
+        },
+        {
+          "value": "B",
+          "label": "Proportion"
+        },
+        {
+          "value": "C",
+          "label": "Sample"
+        },
+        {
+          "value": "D",
+          "label": "Inferential"
+        }
+      ],
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 52,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Which scale of measurement can be either numeric or non-numeric?",
+      "options": [
+        {
+          "value": "A",
+          "label": "Nominal"
+        },
+        {
+          "value": "B",
+          "label": "Ratio"
+        },
+        {
+          "value": "C",
+          "label": "Interval"
+        },
+        {
+          "value": "D",
+          "label": "Quantitative"
+        }
+      ],
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 53,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Which of the following variables use the ratio scale of measurement?",
+      "options": [
+        {
+          "value": "A",
+          "label": "Driver's license number"
+        },
+        {
+          "value": "B",
+          "label": "Temperature"
+        },
+        {
+          "value": "C",
+          "label": "Gender"
+        },
+        {
+          "value": "D",
+          "label": "Weight"
+        }
+      ],
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 54,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "The numbers on football jerseys are an example of _____ data.",
+      "options": [
+        {
+          "value": "A",
+          "label": "categorical"
+        },
+        {
+          "value": "B",
+          "label": "either categorical or quantitative"
+        },
+        {
+          "value": "C",
+          "label": "neither categorical nor quantitative"
+        },
+        {
+          "value": "D",
+          "label": "quantitative"
+        }
+      ],
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 55,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "The height of a building, measured in feet, is an example of _____ data.",
+      "options": [
+        {
+          "value": "A",
+          "label": "categorical"
+        },
+        {
+          "value": "B",
+          "label": "either categorical or quantitative Name: Class: Date: Ch. 01: Data and Statistics"
+        },
+        {
+          "value": "C",
+          "label": "neither categorical or quantitative"
+        },
+        {
+          "value": "D",
+          "label": "quantitative"
+        }
+      ],
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 56,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "An interviewer has made an error in recording the data. This type of error is known as a(n) _____ error.",
+      "options": [
+        {
+          "value": "A",
+          "label": "experimental"
+        },
+        {
+          "value": "B",
+          "label": "data acquisition"
+        },
+        {
+          "value": "C",
+          "label": "non-experimental"
+        },
+        {
+          "value": "D",
+          "label": "conglomerate"
+        }
+      ],
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 57,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Census refers to a(n)",
+      "options": [
+        {
+          "value": "A",
+          "label": "experimental study to collect data on the entire population."
+        },
+        {
+          "value": "B",
+          "label": "experimental study to collect data on a sample."
+        },
+        {
+          "value": "C",
+          "label": "survey to collect data on a sample."
+        },
+        {
+          "value": "D",
+          "label": "survey to collect data on the entire population."
+        }
+      ],
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 58,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "In experimental studies, the variable of interest",
+      "options": [
+        {
+          "value": "A",
+          "label": "is not controlled."
+        },
+        {
+          "value": "B",
+          "label": "is controlled."
+        },
+        {
+          "value": "C",
+          "label": "must be numerical."
+        },
+        {
+          "value": "D",
+          "label": "cannot be numerical."
+        }
+      ],
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 59,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "In observational studies, the variable of interest",
+      "options": [
+        {
+          "value": "A",
+          "label": "is not controlled."
+        },
+        {
+          "value": "B",
+          "label": "is controlled."
+        },
+        {
+          "value": "C",
+          "label": "must be numerical."
+        },
+        {
+          "value": "D",
+          "label": "cannot be numerical."
+        }
+      ],
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 60,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "How many scales of measurement exist?",
+      "options": [
+        {
+          "value": "A",
+          "label": "2"
+        },
+        {
+          "value": "B",
+          "label": "4"
+        },
+        {
+          "value": "C",
+          "label": "6"
+        },
+        {
+          "value": "D",
+          "label": "8"
+        }
+      ],
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 61,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Which of the following scales of measurement are appropriate for quantitative data?",
+      "options": [
+        {
+          "value": "A",
+          "label": "Interval and ordinal"
+        },
+        {
+          "value": "B",
+          "label": "Ratio and ordinal"
+        },
+        {
+          "value": "C",
+          "label": "Nominal and ordinal"
+        },
+        {
+          "value": "D",
+          "label": "Interval and ratio Name: Class: Date: Ch. 01: Data and Statistics"
+        }
+      ],
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 62,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "The sample size",
+      "options": [
+        {
+          "value": "A",
+          "label": "can be larger than the population size."
+        },
+        {
+          "value": "B",
+          "label": "is always smaller than the population size."
+        },
+        {
+          "value": "C",
+          "label": "can be larger or smaller than the population size."
+        },
+        {
+          "value": "D",
+          "label": "is always equal to the size of the population."
+        }
+      ],
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 63,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "A population is",
+      "options": [
+        {
+          "value": "A",
+          "label": "the same as a sample."
+        },
+        {
+          "value": "B",
+          "label": "the selection of a random sample."
+        },
+        {
+          "value": "C",
+          "label": "the collection of all items of interest in a study."
+        },
+        {
+          "value": "D",
+          "label": "always the same size as the sample."
+        }
+      ],
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 64,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "In a random sample of 200 items, 5 items were defective. An estimate of the percentage of defective items in the population is",
+      "options": [
+        {
+          "value": "A",
+          "label": "5%."
+        },
+        {
+          "value": "B",
+          "label": "2.5%."
+        },
+        {
+          "value": "C",
+          "label": "20%."
+        },
+        {
+          "value": "D",
+          "label": "10%."
+        }
+      ],
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 65,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "On a street, the houses are numbered from 300 to 450. The house numbers are examples of _____ data.",
+      "options": [
+        {
+          "value": "A",
+          "label": "categorical"
+        },
+        {
+          "value": "B",
+          "label": "quantitative"
+        },
+        {
+          "value": "C",
+          "label": "both quantitative and categorical"
+        },
+        {
+          "value": "D",
+          "label": "neither quantitative nor categorical"
+        }
+      ],
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 66,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "A survey to collect data on the entire population is a(n)",
+      "options": [
+        {
+          "value": "A",
+          "label": "census."
+        },
+        {
+          "value": "B",
+          "label": "sample."
+        },
+        {
+          "value": "C",
+          "label": "population."
+        },
+        {
+          "value": "D",
+          "label": "inference."
+        }
+      ],
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 67,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "In a sample of 1,600 registered voters, 912 or 57% approve of the way the President is doing his job. The 57% approval is an example of",
+      "options": [
+        {
+          "value": "A",
+          "label": "a sample."
+        },
+        {
+          "value": "B",
+          "label": "descriptive statistics."
+        },
+        {
+          "value": "C",
+          "label": "statistical inference."
+        },
+        {
+          "value": "D",
+          "label": "a population. Name: Class: Date: Ch. 01: Data and Statistics"
+        }
+      ],
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 68,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "In a sample of 1,600 registered voters, 912 or 57% approve of the way the President is doing his job. A political pollster estimates: \"Fifty-seven percent of all voters approve of the President.\" This statement is an example of",
+      "options": [
+        {
+          "value": "A",
+          "label": "a sample."
+        },
+        {
+          "value": "B",
+          "label": "descriptive statistics."
+        },
+        {
+          "value": "C",
+          "label": "statistical inference."
+        },
+        {
+          "value": "D",
+          "label": "a population."
+        }
+      ],
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 69,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "The type of analytics whose models yield a best course of action to take is _____ analytics.",
+      "options": [
+        {
+          "value": "A",
+          "label": "descriptive"
+        },
+        {
+          "value": "B",
+          "label": "prescriptive"
+        },
+        {
+          "value": "C",
+          "label": "predictive"
+        },
+        {
+          "value": "D",
+          "label": "inferential"
+        }
+      ],
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 70,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Data dash-board is an analytical technique that falls in the category of _____ analytics.",
+      "options": [
+        {
+          "value": "A",
+          "label": "prescriptive"
+        },
+        {
+          "value": "B",
+          "label": "predictive"
+        },
+        {
+          "value": "C",
+          "label": "descriptive"
+        },
+        {
+          "value": "D",
+          "label": "diagnostic"
+        }
+      ],
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 71,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Optimization models, which generate solutions that maximize or minimize some objective subject to a set of constraints, fall into the category of _____ analytics.",
+      "options": [
+        {
+          "value": "A",
+          "label": "prescriptive"
+        },
+        {
+          "value": "B",
+          "label": "predictive"
+        },
+        {
+          "value": "C",
+          "label": "descriptive"
+        },
+        {
+          "value": "D",
+          "label": "diagnostic"
+        }
+      ],
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 72,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Simulation, which is the use of probability and statistical computer models to better understand risk, falls under the category of _____ analytics.",
+      "options": [
+        {
+          "value": "A",
+          "label": "prescriptive"
+        },
+        {
+          "value": "B",
+          "label": "predictive"
+        },
+        {
+          "value": "C",
+          "label": "descriptive"
+        },
+        {
+          "value": "D",
+          "label": "diagnostic"
+        }
+      ],
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 73,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "The set of analytical techniques that yield a best course of action is _____ analytics.",
+      "options": [
+        {
+          "value": "A",
+          "label": "prescriptive"
+        },
+        {
+          "value": "B",
+          "label": "predictive"
+        },
+        {
+          "value": "C",
+          "label": "descriptive Name: Class: Date: Ch. 01: Data and Statistics"
+        },
+        {
+          "value": "D",
+          "label": "diagnostic"
+        }
+      ],
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 74,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Analytics is generally thought to comprise three broad categories of techniques that include all of the following except _____ analytics.",
+      "options": [
+        {
+          "value": "A",
+          "label": "prescriptive"
+        },
+        {
+          "value": "B",
+          "label": "predictive"
+        },
+        {
+          "value": "C",
+          "label": "descriptive"
+        },
+        {
+          "value": "D",
+          "label": "diagnostic"
+        }
+      ],
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 75,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "The largest experimental statistical study ever conducted is believed to be for",
+      "options": [
+        {
+          "value": "A",
+          "label": "Cholera."
+        },
+        {
+          "value": "B",
+          "label": "Polio."
+        },
+        {
+          "value": "C",
+          "label": "Diphtheria."
+        },
+        {
+          "value": "D",
+          "label": "Malaria."
+        }
+      ],
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 76,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Which of the following is a categorical variable?",
+      "options": [
+        {
+          "value": "A",
+          "label": "Your age when you began college"
+        },
+        {
+          "value": "B",
+          "label": "Your Social Security Number"
+        },
+        {
+          "value": "C",
+          "label": "Your statistics class start time"
+        },
+        {
+          "value": "D",
+          "label": "Your birth year"
+        }
+      ],
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 77,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "The major applications of data mining have been made by companies with a strong _______ focus.",
+      "options": [
+        {
+          "value": "A",
+          "label": "wholesale"
+        },
+        {
+          "value": "B",
+          "label": "manufacturing"
+        },
+        {
+          "value": "C",
+          "label": "consumer"
+        },
+        {
+          "value": "D",
+          "label": "research and development"
+        }
+      ],
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 78,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Dr. Kurt Thearling, a leading practitioner in the field, defines data mining as “the _____ extraction of _____ information from databases.”",
+      "options": [
+        {
+          "value": "A",
+          "label": "thorough, insightful"
+        },
+        {
+          "value": "B",
+          "label": "timely, accurate"
+        },
+        {
+          "value": "C",
+          "label": "automated, predictive"
+        },
+        {
+          "value": "D",
+          "label": "intentional, useful"
+        }
+      ],
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 79,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Which of the following is not an example of a firm that sells or leases business database services to clients?",
+      "options": [
+        {
+          "value": "A",
+          "label": "Dun & Bradstreet"
+        },
+        {
+          "value": "B",
+          "label": "Bloomberg"
+        },
+        {
+          "value": "C",
+          "label": "Census Bureau Name: Class: Date: Ch. 01: Data and Statistics"
+        },
+        {
+          "value": "D",
+          "label": "Dow Jones & Co."
+        }
+      ],
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 80,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Which of the following variables uses the interval scale of measurement?",
+      "options": [
+        {
+          "value": "A",
+          "label": "Standardized test score"
+        },
+        {
+          "value": "B",
+          "label": "Time duration"
+        },
+        {
+          "value": "C",
+          "label": "Student ID number"
+        },
+        {
+          "value": "D",
+          "label": "Vehicle miles-per-gallon"
+        }
+      ],
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "id": 81,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "The number observations in a complete data set having 15 elements and 5 variables is",
+      "options": [
+        {
+          "value": "A",
+          "label": "5."
+        },
+        {
+          "value": "B",
+          "label": "10."
+        },
+        {
+          "value": "C",
+          "label": "15."
+        },
+        {
+          "value": "D",
+          "label": "75."
+        }
+      ],
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "id": 82,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Which of the following is not an example of descriptive statistics?",
+      "options": [
+        {
+          "value": "A",
+          "label": "A histogram depicting the age distribution for 30 randomly selected students"
+        },
+        {
+          "value": "B",
+          "label": "An estimate of the number of Alaska residents who have visited Canada"
+        },
+        {
+          "value": "C",
+          "label": "A table summarizing the data collected in a sample of new-car buyers"
+        },
+        {
+          "value": "D",
+          "label": "The proportion of mailed-out questionnaires that were returned"
+        }
+      ],
+      "answer": "B",
+      "explanation": ""
+    },
+    {
+      "id": 83,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "Facts and figures that are collected, analyzed and summarized for presentation and interpretation are",
+      "options": [
+        {
+          "value": "A",
+          "label": "variables."
+        },
+        {
+          "value": "B",
+          "label": "elements."
+        },
+        {
+          "value": "C",
+          "label": "time series data."
+        },
+        {
+          "value": "D",
+          "label": "data."
+        }
+      ],
+      "answer": "D",
+      "explanation": ""
+    },
+    {
+      "id": 84,
+      "subject": "統計學",
+      "chapter": "Ch1",
+      "question": "The most common type of observational study is a(n)",
+      "options": [
+        {
+          "value": "A",
+          "label": "experiment."
+        },
+        {
+          "value": "B",
+          "label": "survey."
+        },
+        {
+          "value": "C",
+          "label": "debate."
+        },
+        {
+          "value": "D",
+          "label": "statistical inference."
+        }
+      ],
+      "answer": "B",
+      "explanation": ""
+    }
+  ]
+}
