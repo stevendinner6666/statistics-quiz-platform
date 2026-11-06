@@ -4,764 +4,860 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>StudyFlow｜線上題庫練習</title>
+<title>StudyFlow｜學習測驗平台</title>
 <style>
 :root {
-  --ink:#202124;
-  --muted:#777b84;
-  --line:#e8e9ed;
-  --bg:#f7f8fa;
-  --blue:#315efb;
-  --green:#168653;
-  --red:#d94343;
+  --blue:#2563eb;
+  --blue-light:#eff6ff;
+  --green:#16a34a;
+  --red:#dc2626;
+  --text:#1e293b;
+  --muted:#64748b;
+  --border:#e2e8f0;
+  --bg:#f8fafc;
+  --white:#ffffff;
 }
 * { box-sizing:border-box; }
 body {
   margin:0;
   font-family:Arial,"Noto Sans TC",sans-serif;
   background:var(--bg);
-  color:var(--ink);
+  color:var(--text);
 }
+button,select { font:inherit; }
+button { cursor:pointer; }
 header {
   background:white;
-  border-bottom:1px solid var(--line);
+  border-bottom:1px solid var(--border);
   padding:17px 6%;
   display:flex;
-  justify-content:space-between;
   align-items:center;
-}
-.logo { font-size:21px; font-weight:800; }
-.logo span { color:var(--blue); }
-header small { color:var(--muted); }
-main { max-width:920px; margin:35px auto; padding:0 20px 60px; }
-h1 { font-size:29px; margin-bottom:8px; }
-.subtitle { color:var(--muted); margin-bottom:28px; }
-.card {
-  background:white;
-  border:1px solid var(--line);
-  border-radius:16px;
-  padding:25px;
-  margin-bottom:18px;
-  box-shadow:0 3px 14px #00000005;
-}
-.card h2 { margin:0 0 17px; font-size:19px; }
-.stats {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
+  justify-content:space-between;
   gap:12px;
 }
+.logo { font-size:23px; font-weight:800; color:var(--blue); }
+.logo span { color:var(--text); }
+.header-note { color:var(--muted); font-size:13px; }
+.container {
+  width:min(1050px,92%);
+  margin:32px auto;
+}
+.card {
+  background:white;
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:24px;
+  margin-bottom:20px;
+}
+h1 { font-size:28px; margin:0 0 10px; }
+h2 { font-size:20px; margin:0 0 16px; }
+h3 { font-size:17px; }
+p { line-height:1.7; }
+.muted { color:var(--muted); }
+.small { font-size:13px; }
+.grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
 .stat {
-  background:#f7f8fc;
-  border-radius:12px;
-  padding:17px;
+  background:white;
+  border:1px solid var(--border);
+  padding:18px;
+  border-radius:14px;
 }
-.stat strong { display:block; font-size:25px; margin-bottom:5px; }
-.stat span { color:var(--muted); font-size:13px; }
-button,select {
-  font:inherit;
-  border-radius:9px;
-  padding:12px 15px;
-}
-button {
+.stat strong { display:block; font-size:26px; margin-top:8px; }
+.btn {
   border:0;
-  cursor:pointer;
-  background:var(--blue);
-  color:white;
-  font-weight:650;
+  border-radius:10px;
+  padding:12px 18px;
+  font-weight:700;
+  transition:.15s;
 }
-button:disabled { opacity:.45; cursor:not-allowed; }
-button.secondary {
-  background:white;
-  color:var(--ink);
-  border:1px solid var(--line);
-}
-button.danger { background:#fff0f0; color:var(--red); }
+.btn-primary { background:var(--blue); color:white; }
+.btn-primary:hover { background:#1d4ed8; }
+.btn-secondary { background:#f1f5f9; color:var(--text); }
+.btn-danger { background:#fee2e2; color:#b91c1c; }
+.btn:disabled { opacity:.45; cursor:not-allowed; }
+.actions { display:flex; gap:10px; flex-wrap:wrap; margin-top:18px; }
 select {
-  border:1px solid var(--line);
-  background:white;
   width:100%;
-  margin:8px 0 15px;
-}
-label { display:block; font-weight:600; margin-top:12px; }
-.actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; }
-.option {
-  display:block;
-  width:100%;
-  text-align:left;
+  padding:12px;
+  border:1px solid var(--border);
+  border-radius:9px;
   background:white;
-  color:var(--ink);
-  border:1px solid var(--line);
-  margin:10px 0;
-  padding:15px;
-  line-height:1.55;
-  font-weight:400;
+  margin:8px 0 16px;
 }
-.option:hover:not(:disabled) { border-color:var(--blue); }
-.option.selected {
-  border:2px solid var(--blue);
-  background:#f2f5ff;
-}
-.option.correct {
-  border:2px solid var(--green);
-  background:#edfaf3;
-}
-.option.incorrect {
-  border:2px solid var(--red);
-  background:#fff1f1;
-}
-.option:disabled { cursor:default; opacity:1; }
-.question-meta { color:var(--muted); font-size:14px; margin-bottom:15px; }
-.question-text { font-size:19px; line-height:1.7; font-weight:650; }
+label { font-weight:700; font-size:14px; }
+.hidden { display:none !important; }
 .progress {
-  height:7px;
-  background:#eceef2;
+  height:8px;
+  background:#e2e8f0;
   border-radius:20px;
   overflow:hidden;
-  margin:15px 0 22px;
+  margin:12px 0;
 }
-.progress div {
+.progress-bar {
   height:100%;
   background:var(--blue);
-  transition:.2s;
+  transition:width .2s;
 }
-.feedback {
-  padding:14px;
-  border-radius:10px;
-  margin-top:15px;
+.quiz-layout {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 260px;
+  gap:18px;
+  align-items:start;
+}
+.question-title {
+  font-size:20px;
   line-height:1.7;
+  white-space:pre-wrap;
+  margin:18px 0;
 }
-.feedback.good { background:#edfaf3; color:var(--green); }
-.feedback.bad { background:#fff1f1; color:var(--red); }
-.hidden { display:none !important; }
-.muted { color:var(--muted); font-size:14px; }
-.review-item { border-top:1px solid var(--line); padding:17px 0; }
-.review-item p { line-height:1.6; }
-footer { text-align:center; color:var(--muted); padding:25px; font-size:13px; }
-@media(max-width:600px) {
-  main { margin-top:22px; }
-  .card { padding:19px; }
-  .stats { gap:7px; }
-  .stat { padding:12px; }
-  .stat strong { font-size:21px; }
-  h1 { font-size:25px; }
+.option {
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  width:100%;
+  text-align:left;
+  padding:15px;
+  margin:10px 0;
+  border:1px solid var(--border);
+  border-radius:11px;
+  background:white;
+  line-height:1.6;
+}
+.option:hover { border-color:var(--blue); }
+.option.selected {
+  border:2px solid var(--blue);
+  background:var(--blue-light);
+}
+.option-key {
+  flex:none;
+  width:27px;
+  height:27px;
+  border-radius:50%;
+  background:#f1f5f9;
+  display:grid;
+  place-items:center;
+  font-weight:700;
+}
+.question-nav {
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:8px;
+  margin:14px 0;
+}
+.nav-number {
+  border:1px solid var(--border);
+  background:#f8fafc;
+  border-radius:9px;
+  min-height:39px;
+  font-weight:700;
+}
+.nav-number.answered {
+  background:#dcfce7;
+  color:#166534;
+  border-color:#86efac;
+}
+.nav-number.current {
+  background:var(--blue);
+  color:white;
+  border-color:var(--blue);
+}
+.legend {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  font-size:12px;
+  color:var(--muted);
+}
+.legend span { display:flex; align-items:center; gap:5px; }
+.dot { width:10px; height:10px; border-radius:3px; display:inline-block; }
+.result-item {
+  padding:16px 0;
+  border-bottom:1px solid var(--border);
+}
+.result-item:last-child { border:0; }
+.result-item.correct { border-left:4px solid var(--green); padding-left:13px; }
+.result-item.wrong { border-left:4px solid var(--red); padding-left:13px; }
+.result-item.unanswered { border-left:4px solid #94a3b8; padding-left:13px; }
+.tag {
+  display:inline-block;
+  border-radius:20px;
+  padding:4px 9px;
+  font-size:12px;
+  font-weight:700;
+}
+.tag-green { background:#dcfce7; color:#166534; }
+.tag-red { background:#fee2e2; color:#991b1b; }
+.tag-gray { background:#f1f5f9; color:#475569; }
+hr { border:0; border-top:1px solid var(--border); margin:20px 0; }
+@media(max-width:750px) {
+  .quiz-layout { grid-template-columns:1fr; }
+  .grid { grid-template-columns:1fr; }
+  .container { margin:20px auto; }
+  .card { padding:18px; }
+  header { padding:15px 4%; }
 }
 </style>
 </head>
 
 <body>
 <header>
-  <div class="logo">Study<span>Flow</span></div>
-  <small>讓每一次練習，都成為進步</small>
+  <div class="logo">StudyFlow<span> .</span></div>
+  <div class="header-note">讓每一次練習，都成為進步</div>
 </header>
 
-<main>
+<main class="container">
 
-<section id="home">
-  <h1>開始你的學習</h1>
-  <p class="subtitle">選擇科目與題數，開始一場練習。</p>
+<!-- 首頁 -->
+<section id="homePage">
+  <div class="card">
+    <h1>歡迎使用 StudyFlow</h1>
+    <p class="muted">你的個人化學習與考試練習平台。</p>
+    <div id="loadStatus" class="small muted">正在讀取題庫...</div>
+  </div>
 
-  <div class="stats">
+  <div class="grid">
     <div class="stat">
-      <strong id="totalQuestions">載入中</strong>
-      <span>題庫總題數</span>
+      <span class="muted small">題庫總題數</span>
+      <strong id="totalQuestions">--</strong>
     </div>
     <div class="stat">
-      <strong id="totalHistory">0</strong>
-      <span>完成測驗次數</span>
+      <span class="muted small">累積測驗次數</span>
+      <strong id="totalAttempts">0</strong>
     </div>
     <div class="stat">
-      <strong id="averageScore">0%</strong>
-      <span>平均正確率</span>
+      <span class="muted small">錯題收藏</span>
+      <strong id="wrongCount">0</strong>
     </div>
   </div>
 
-  <div class="card" style="margin-top:20px">
-    <h2>選擇測驗內容</h2>
-
-    <label>科目</label>
+  <div class="card">
+    <h2>開始練習</h2>
+    <label for="subjectSelect">科目</label>
     <select id="subjectSelect">
-      <option value="統計學">統計學</option>
+      <option value="statistics">統計學</option>
     </select>
 
-    <label>章節</label>
+    <label for="chapterSelect">章節</label>
     <select id="chapterSelect">
-      <option value="Ch1">Ch1</option>
+      <option value="ch1">Ch1｜Data and Statistics</option>
     </select>
 
-    <label>測驗題數</label>
-    <select id="countSelect">
+    <label for="questionCount">測驗題數</label>
+    <select id="questionCount">
       <option value="10">10 題</option>
       <option value="20">20 題</option>
       <option value="50">50 題</option>
       <option value="all">全部題目</option>
     </select>
 
-    <p class="muted" id="availableText">正在讀取題庫……</p>
-
-    <div class="actions">
-      <button id="startBtn" onclick="startQuiz()" disabled>開始測驗</button>
-      <button class="secondary" onclick="showWrongBook()">查看錯題本</button>
-      <button class="secondary" onclick="showHistory()">測驗紀錄</button>
+    <div id="resumeArea" class="hidden">
+      <p class="muted">你有一份尚未完成的測驗，可以繼續作答。</p>
+      <button class="btn btn-primary" onclick="resumeQuiz()">繼續上次測驗</button>
+      <button class="btn btn-secondary" onclick="discardDraft()">放棄未完成測驗</button>
+      <hr>
     </div>
 
-    <p id="loadMessage" class="muted"></p>
+    <div class="actions">
+      <button class="btn btn-primary" id="startBtn" onclick="startQuiz()">開始測驗</button>
+      <button class="btn btn-secondary" onclick="showWrongBook()">錯題本</button>
+      <button class="btn btn-secondary" onclick="showHistory()">測驗紀錄</button>
+    </div>
   </div>
 </section>
 
-<section id="quiz" class="hidden">
+<!-- 測驗頁 -->
+<section id="quizPage" class="hidden">
   <div class="card">
-    <div class="question-meta" id="questionMeta"></div>
+    <div class="muted small" id="quizSubtitle">統計學 Ch1</div>
+    <div style="display:flex;justify-content:space-between;gap:10px;align-items:center;margin-top:8px">
+      <h2 id="questionCounter">第 1 題</h2>
+      <span class="tag tag-green" id="answeredCounter">已作答 0 題</span>
+    </div>
+    <div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+    <div class="muted small" id="progressText"></div>
+  </div>
 
-    <div class="progress">
-      <div id="progressBar" style="width:0%"></div>
+  <div class="quiz-layout">
+    <div class="card">
+      <div class="muted small" id="questionId"></div>
+      <div class="question-title" id="questionText"></div>
+      <div id="optionsArea"></div>
+
+      <div class="actions">
+        <button class="btn btn-secondary" onclick="previousQuestion()">上一題</button>
+        <button class="btn btn-secondary" onclick="nextQuestion()">下一題</button>
+      </div>
+      <p class="muted small">選擇答案後會自動暫存，交卷前都可以修改。</p>
     </div>
 
-    <div class="question-text" id="questionText"></div>
-    <div id="options"></div>
-
-    <p class="muted" id="selectionHint">
-      請選擇一個答案，確認前可以重新選擇。
-    </p>
-
-    <div class="actions">
-      <button id="confirmBtn" onclick="confirmAnswer()" disabled>
-        確認答案
-      </button>
-      <button id="nextBtn" onclick="nextQuestion()" disabled>
-        下一題
-      </button>
-      <button class="secondary" onclick="finishEarly()">
-        結束測驗
-      </button>
-    </div>
-
-    <div id="feedback"></div>
+    <aside class="card">
+      <h3>題號導覽</h3>
+      <div class="legend">
+        <span><i class="dot" style="background:#dcfce7"></i>已作答</span>
+        <span><i class="dot" style="background:#2563eb"></i>目前題目</span>
+        <span><i class="dot" style="background:#f1f5f9"></i>未作答</span>
+      </div>
+      <div class="question-nav" id="questionNav"></div>
+      <hr>
+      <div class="small muted" id="navSummary"></div>
+      <button class="btn btn-primary" style="width:100%;margin-top:15px" onclick="submitQuiz()">交卷</button>
+      <button class="btn btn-secondary" style="width:100%;margin-top:9px" onclick="backToHome()">暫時離開</button>
+    </aside>
   </div>
 </section>
 
-<section id="result" class="hidden">
-  <h1>測驗完成！</h1>
-  <p class="subtitle">以下是這次的測驗結果。</p>
-
+<!-- 結果頁 -->
+<section id="resultPage" class="hidden">
   <div class="card">
-    <div class="stats">
+    <h1>測驗完成！</h1>
+    <p class="muted">以下是本次測驗結果。</p>
+    <div class="grid">
       <div class="stat">
+        <span class="muted small">總分</span>
         <strong id="resultScore">0</strong>
-        <span>答對題數</span>
       </div>
       <div class="stat">
-        <strong id="resultWrong">0</strong>
-        <span>答錯題數</span>
+        <span class="muted small">答對題數</span>
+        <strong id="resultCorrect">0</strong>
       </div>
       <div class="stat">
-        <strong id="resultRate">0%</strong>
-        <span>正確率</span>
+        <span class="muted small">未作答</span>
+        <strong id="resultUnanswered">0</strong>
       </div>
     </div>
-
-    <p id="unansweredSummary" class="muted"></p>
-
+    <p id="resultMessage"></p>
     <div class="actions">
-      <button onclick="showReview()">查看答案與檢討</button>
-      <button class="secondary" onclick="goHome()">回到首頁</button>
+      <button class="btn btn-primary" onclick="backToHome()">回首頁</button>
+      <button class="btn btn-secondary" onclick="showWrongBook()">查看錯題本</button>
     </div>
   </div>
 
-  <div id="review" class="card hidden">
-    <h2>完整答案檢討</h2>
-    <div id="reviewList"></div>
+  <div class="card">
+    <h2>本次答題檢討</h2>
+    <div id="reviewArea"></div>
   </div>
 </section>
 
+<!-- 錯題本 -->
 <section id="wrongPage" class="hidden">
-  <h1>錯題本</h1>
-  <p class="subtitle">整理曾經答錯的題目，方便再次練習。</p>
-
   <div class="card">
+    <h1>錯題本</h1>
+    <p class="muted">整理你曾經答錯的題目。</p>
     <div id="wrongList"></div>
     <div class="actions">
-      <button onclick="startWrongQuiz()">重新練習錯題</button>
-      <button class="secondary" onclick="goHome()">回到首頁</button>
-      <button class="danger" onclick="clearWrongBook()">清空錯題本</button>
+      <button class="btn btn-primary" onclick="startWrongQuiz()">重新練習錯題</button>
+      <button class="btn btn-secondary" onclick="backToHome()">回首頁</button>
     </div>
   </div>
 </section>
 
+<!-- 歷史紀錄 -->
 <section id="historyPage" class="hidden">
-  <h1>測驗紀錄</h1>
-  <p class="subtitle">查看過去的練習成果。</p>
-
   <div class="card">
+    <h1>測驗紀錄</h1>
+    <p class="muted">查看過去的練習成績。</p>
     <div id="historyList"></div>
     <div class="actions">
-      <button class="secondary" onclick="goHome()">回到首頁</button>
+      <button class="btn btn-secondary" onclick="backToHome()">回首頁</button>
+      <button class="btn btn-danger" onclick="clearHistory()">清除歷史紀錄</button>
     </div>
   </div>
 </section>
 
 </main>
 
-<footer>StudyFlow · Personal Learning Platform</footer>
-
 <script>
-const BANK_URL = "./data/statistics/ch1.json";
+const BANK_PATH = "./data/statistics/ch1.json";
 
-let bank = [];
+const STORAGE = {
+  draft: "studyflow_draft_v2",
+  history: "studyflow_history_v2",
+  wrong: "studyflow_wrong_v2"
+};
+
+let allQuestions = [];
 let quizQuestions = [];
+let answers = {};
 let currentIndex = 0;
-let answers = [];
-let lastResults = [];
 let wrongMode = false;
+let quizFinished = false;
 
-// 暫存目前選取的答案，不立即判分
-let selectedAnswer = null;
-
-const $ = id => document.getElementById(id);
-
-function getStorage(key, fallback) {
+function readStorage(key, fallback) {
   try {
-    return JSON.parse(localStorage.getItem(key)) ?? fallback;
+    const value = localStorage.getItem(key);
+    return value ? JSON.parse(value) : fallback;
   } catch {
     return fallback;
   }
 }
 
-function saveStorage(key, value) {
+function writeStorage(key, value) {
   localStorage.setItem(key, JSON.stringify(value));
 }
 
 function shuffle(array) {
   const result = [...array];
-
   for (let i = result.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [result[i], result[j]] = [result[j], result[i]];
   }
-
   return result;
 }
 
-function showPage(id) {
-  ["home","quiz","result","wrongPage","historyPage"].forEach(page => {
-    $(page).classList.toggle("hidden", page !== id);
-  });
+function escapeHTML(value) {
+  return String(value ?? "").replace(/[&<>"']/g, char => ({
+    "&":"&amp;",
+    "<":"&lt;",
+    ">":"&gt;",
+    '"':"&quot;",
+    "'":"&#39;"
+  })[char]);
 }
 
-async function loadBank() {
-  try {
-    const response = await fetch(BANK_URL, {
-      cache:"no-store"
-    });
+function showPage(pageId) {
+  ["homePage","quizPage","resultPage","wrongPage","historyPage"]
+    .forEach(id => document.getElementById(id).classList.add("hidden"));
+  document.getElementById(pageId).classList.remove("hidden");
+  window.scrollTo({top:0,behavior:"smooth"});
+}
 
-    if (!response.ok) {
-      throw new Error("HTTP " + response.status);
-    }
+async function loadQuestions() {
+  const status = document.getElementById("loadStatus");
+  try {
+    const response = await fetch(BANK_PATH);
+    if (!response.ok) throw new Error("無法讀取題庫，HTTP " + response.status);
 
     const data = await response.json();
-
     if (!Array.isArray(data.questions)) {
-      throw new Error("題庫格式不正確");
+      throw new Error("題庫格式錯誤，找不到 questions");
     }
 
-    bank = data.questions.filter(q =>
-      q.question &&
-      Array.isArray(q.options) &&
-      q.answer
-    );
+    allQuestions = data.questions.map((q,index) => ({
+      ...q,
+      id: q.id ?? index + 1
+    }));
 
-    $("totalQuestions").textContent = bank.length;
-    $("availableText").textContent =
-      `目前共有 ${bank.length} 題可供練習。`;
-
-    $("loadMessage").textContent = "題庫載入成功！";
-    $("startBtn").disabled = bank.length === 0;
+    document.getElementById("totalQuestions").textContent = allQuestions.length;
+    status.textContent = "題庫讀取成功，可以開始測驗。";
+    status.style.color = "#16a34a";
 
     updateDashboard();
-
-  } catch (error) {
-    $("totalQuestions").textContent = "載入失敗";
-    $("availableText").textContent = "目前無法讀取題庫。";
-    $("loadMessage").textContent =
-      "錯誤：" + error.message +
-      "。請確認 ch1.json 位於 data/statistics/ 資料夾。";
+    checkDraft();
+  } catch(error) {
+    status.textContent = "題庫讀取失敗：" + error.message;
+    status.style.color = "#dc2626";
+    document.getElementById("startBtn").disabled = true;
   }
 }
 
 function updateDashboard() {
-  const history = getStorage("studyflow_history", []);
+  const history = readStorage(STORAGE.history, []);
+  const wrong = readStorage(STORAGE.wrong, {});
+  document.getElementById("totalAttempts").textContent = history.length;
+  document.getElementById("wrongCount").textContent = Object.keys(wrong).length;
+}
 
-  $("totalHistory").textContent = history.length;
+function checkDraft() {
+  const draft = readStorage(STORAGE.draft, null);
+  const area = document.getElementById("resumeArea");
+  if (draft && Array.isArray(draft.questions) && draft.questions.length) {
+    area.classList.remove("hidden");
+  } else {
+    area.classList.add("hidden");
+  }
+}
 
-  const average = history.length
-    ? Math.round(
-        history.reduce((sum, item) => sum + item.rate, 0) /
-        history.length
-      )
-    : 0;
-
-  $("averageScore").textContent = average + "%";
+function makeQuestionKey(q) {
+  return `${q.subject || "統計學"}_${q.chapter || "Ch1"}_${q.id}`;
 }
 
 function startQuiz() {
-  if (!bank.length) return;
+  if (!allQuestions.length) return alert("題庫尚未載入完成。");
 
-  const countValue = $("countSelect").value;
-
+  const countValue = document.getElementById("questionCount").value;
   const count = countValue === "all"
-    ? bank.length
-    : Math.min(Number(countValue), bank.length);
+    ? allQuestions.length
+    : Math.min(Number(countValue), allQuestions.length);
 
-  quizQuestions = shuffle(bank).slice(0, count);
+  quizQuestions = shuffle(allQuestions).slice(0,count);
+  answers = {};
+  currentIndex = 0;
+  wrongMode = false;
+  quizFinished = false;
 
-  beginAttempt();
+  saveDraft();
+  beginQuizDisplay();
 }
 
-function beginAttempt() {
-  currentIndex = 0;
-  answers = [];
-  lastResults = [];
-  wrongMode = false;
+function startWrongQuiz() {
+  const wrong = Object.values(readStorage(STORAGE.wrong, {}));
+  if (!wrong.length) return alert("目前沒有錯題可以練習。");
 
-  showPage("quiz");
+  quizQuestions = shuffle(wrong);
+  answers = {};
+  currentIndex = 0;
+  wrongMode = true;
+  quizFinished = false;
+
+  saveDraft();
+  beginQuizDisplay();
+}
+
+function resumeQuiz() {
+  const draft = readStorage(STORAGE.draft, null);
+  if (!draft || !Array.isArray(draft.questions)) {
+    return alert("找不到未完成的測驗。");
+  }
+
+  quizQuestions = draft.questions;
+  answers = draft.answers || {};
+  currentIndex = Math.min(draft.currentIndex || 0, quizQuestions.length - 1);
+  wrongMode = Boolean(draft.wrongMode);
+  quizFinished = false;
+
+  beginQuizDisplay();
+}
+
+function discardDraft() {
+  if (!confirm("確定要放棄這份未完成的測驗嗎？")) return;
+  localStorage.removeItem(STORAGE.draft);
+  checkDraft();
+}
+
+function saveDraft() {
+  if (quizFinished || !quizQuestions.length) return;
+
+  writeStorage(STORAGE.draft, {
+    questions: quizQuestions,
+    answers,
+    currentIndex,
+    wrongMode,
+    updatedAt: new Date().toISOString()
+  });
+
+  checkDraft();
+}
+
+function beginQuizDisplay() {
+  showPage("quizPage");
   renderQuestion();
+  renderQuestionNav();
 }
 
 function renderQuestion() {
   const q = quizQuestions[currentIndex];
+  if (!q) return;
 
-  selectedAnswer = null;
+  document.getElementById("quizSubtitle").textContent =
+    `${q.subject || "統計學"} ${q.chapter || "Ch1"}`;
 
-  $("questionMeta").textContent =
-    `統計學 · Ch1 ｜ 第 ${currentIndex + 1} / ${quizQuestions.length} 題`;
+  document.getElementById("questionCounter").textContent =
+    `第 ${currentIndex + 1} 題 / 共 ${quizQuestions.length} 題`;
 
-  $("progressBar").style.width =
-    ((currentIndex + 1) / quizQuestions.length * 100) + "%";
+  document.getElementById("questionId").textContent =
+    `題庫題號：${q.id}`;
 
-  $("questionText").textContent = q.question;
-  $("feedback").innerHTML = "";
+  document.getElementById("questionText").textContent = q.question || "";
 
-  $("confirmBtn").disabled = true;
-  $("confirmBtn").classList.remove("hidden");
+  const selected = answers[currentIndex];
+  const optionsArea = document.getElementById("optionsArea");
+  optionsArea.innerHTML = "";
 
-  $("nextBtn").disabled = true;
+  (q.options || []).forEach((option,index) => {
+    const value = option.value ?? String.fromCharCode(65 + index);
+    const label = option.label ?? option.text ?? "";
 
-  $("nextBtn").textContent =
-    currentIndex === quizQuestions.length - 1
-      ? "查看測驗結果"
-      : "下一題";
-
-  $("selectionHint").textContent =
-    "請選擇一個答案，確認前可以重新選擇。";
-
-  const options = $("options");
-  options.innerHTML = "";
-
-  q.options.forEach(option => {
     const button = document.createElement("button");
-
-    button.className = "option";
-    button.textContent = `${option.value}. ${option.label}`;
-
-    button.onclick = () => selectAnswer(option.value);
-
-    options.appendChild(button);
+    button.className = "option" + (selected === value ? " selected" : "");
+    button.innerHTML = `
+      <span class="option-key">${escapeHTML(value)}</span>
+      <span>${escapeHTML(label)}</span>
+    `;
+    button.onclick = () => selectAnswer(value);
+    optionsArea.appendChild(button);
   });
+
+  updateProgress();
 }
 
-// 第一次點擊只選取答案
 function selectAnswer(value) {
-  if (answers[currentIndex]) return;
-
-  selectedAnswer = value;
-
-  const q = quizQuestions[currentIndex];
-  const buttons = [...$("options").children];
-
-  buttons.forEach((button, index) => {
-    const option = q.options[index];
-
-    button.classList.toggle(
-      "selected",
-      option.value === selectedAnswer
-    );
-  });
-
-  $("confirmBtn").disabled = false;
-
-  $("selectionHint").textContent =
-    `目前選擇：${value}。確認前仍可更改答案。`;
+  if (quizFinished) return;
+  answers[currentIndex] = value;
+  saveDraft();
+  renderQuestion();
+  renderQuestionNav();
 }
 
-// 按下確認答案後才正式判分
-function confirmAnswer() {
-  if (selectedAnswer === null) return;
-  if (answers[currentIndex]) return;
+function updateProgress() {
+  const answered = Object.keys(answers).length;
+  const total = quizQuestions.length;
+  const percentage = total ? answered / total * 100 : 0;
 
-  const q = quizQuestions[currentIndex];
+  document.getElementById("progressBar").style.width = percentage + "%";
+  document.getElementById("progressText").textContent =
+    `目前已作答 ${answered} / ${total} 題`;
 
-  const correct = String(q.answer).trim().toUpperCase();
-  const isCorrect = selectedAnswer === correct;
+  document.getElementById("answeredCounter").textContent =
+    `已作答 ${answered} 題`;
+}
 
-  answers[currentIndex] = {
-    question:q,
-    selected:selectedAnswer,
-    correct,
-    isCorrect
-  };
+function renderQuestionNav() {
+  const nav = document.getElementById("questionNav");
+  nav.innerHTML = "";
 
-  const buttons = [...$("options").children];
+  quizQuestions.forEach((q,index) => {
+    const button = document.createElement("button");
+    button.className = "nav-number";
 
-  buttons.forEach((button, index) => {
-    const option = q.options[index];
+    if (answers[index] !== undefined) button.classList.add("answered");
+    if (index === currentIndex) button.classList.add("current");
 
-    button.disabled = true;
-    button.classList.remove("selected");
+    button.textContent = index + 1;
+    button.title = answers[index] !== undefined ? "已作答" : "尚未作答";
+    button.onclick = () => goToQuestion(index);
 
-    if (option.value === correct) {
-      button.classList.add("correct");
-    }
-
-    if (option.value === selectedAnswer && !isCorrect) {
-      button.classList.add("incorrect");
-    }
+    nav.appendChild(button);
   });
 
-  $("confirmBtn").disabled = true;
-  $("confirmBtn").classList.add("hidden");
+  const answered = Object.keys(answers).length;
+  const unanswered = quizQuestions.length - answered;
+  document.getElementById("navSummary").textContent =
+    `已作答：${answered} 題｜未作答：${unanswered} 題`;
+}
 
-  $("selectionHint").textContent = "答案已確認。";
+function goToQuestion(index) {
+  if (index < 0 || index >= quizQuestions.length) return;
+  currentIndex = index;
+  saveDraft();
+  renderQuestion();
+  renderQuestionNav();
+}
 
-  $("feedback").innerHTML = `
-    <div class="feedback ${isCorrect ? "good" : "bad"}">
-      ${isCorrect ? "答對了！" : "答錯了！"}
-      <br>
-      正確答案：${correct}
-      <br>
-      解析：${q.explanation || "原始題庫未提供解析。"}
-    </div>
-  `;
-
-  if (!isCorrect) {
-    addWrongQuestion(q);
-  }
-
-  $("nextBtn").disabled = false;
+function previousQuestion() {
+  if (currentIndex > 0) goToQuestion(currentIndex - 1);
 }
 
 function nextQuestion() {
-  if (!answers[currentIndex]) return;
-
   if (currentIndex < quizQuestions.length - 1) {
-    currentIndex++;
-    renderQuestion();
-  } else {
-    finishQuiz(false);
+    goToQuestion(currentIndex + 1);
   }
 }
 
-function finishEarly() {
-  const confirmed = confirm(
-    "確定要提前結束測驗嗎？\n結束後會顯示全部題目的答案與解析。"
-  );
+function submitQuiz() {
+  const answered = Object.keys(answers).length;
+  const unanswered = quizQuestions.length - answered;
 
-  if (confirmed) {
-    finishQuiz(true);
-  }
+  let message = `已作答 ${answered} 題，尚有 ${unanswered} 題未作答。`;
+  if (!confirm(message + "\n確定要交卷並統一批改嗎？")) return;
+
+  finishQuiz();
 }
 
-function finishQuiz(early = false) {
-  lastResults = quizQuestions.map((q, index) => {
-    const answer = answers[index];
-    const correct = String(q.answer).trim().toUpperCase();
+function finishQuiz() {
+  quizFinished = true;
+
+  let correct = 0;
+  let unanswered = 0;
+
+  const results = quizQuestions.map((q,index) => {
+    const userAnswer = answers[index];
+    const answer = String(q.answer ?? "").trim().toUpperCase();
+    const selected = userAnswer === undefined
+      ? null
+      : String(userAnswer).trim().toUpperCase();
+
+    const isUnanswered = selected === null;
+    const isCorrect = !isUnanswered && selected === answer;
+
+    if (isUnanswered) unanswered++;
+    if (isCorrect) correct++;
 
     return {
       question:q,
-      selected:answer?.selected ?? null,
-      correct,
-      isCorrect:answer ? answer.isCorrect : false,
-      unanswered:!answer
+      userAnswer:selected,
+      correctAnswer:answer,
+      isCorrect,
+      isUnanswered
     };
   });
 
-  const answered = lastResults.filter(a => !a.unanswered);
-  const correctCount = answered.filter(a => a.isCorrect).length;
-  const wrongCount = answered.filter(a => !a.isCorrect).length;
-  const unansweredCount = lastResults.filter(a => a.unanswered).length;
+  const total = quizQuestions.length;
+  const score = total ? Math.round(correct / total * 100) : 0;
 
-  const rate = answered.length
-    ? Math.round(correctCount / answered.length * 100)
-    : 0;
+  saveWrongAnswers(results);
 
-  $("resultScore").textContent = correctCount;
-  $("resultWrong").textContent = wrongCount;
-  $("resultRate").textContent = rate + "%";
+  const history = readStorage(STORAGE.history, []);
+  history.unshift({
+    date:new Date().toLocaleString("zh-TW"),
+    total,
+    correct,
+    unanswered,
+    score,
+    wrongMode
+  });
+  writeStorage(STORAGE.history, history.slice(0,100));
 
-  $("unansweredSummary").textContent =
-    `總題數：${quizQuestions.length}｜已作答：${answered.length}｜未作答：${unansweredCount}`;
+  localStorage.removeItem(STORAGE.draft);
 
-  $("result").querySelector(".subtitle").textContent =
-    early
-      ? "已提前結束，你仍然可以檢視全部題目的答案與解析。"
-      : "以下是這次的測驗結果。";
+  document.getElementById("resultScore").textContent = score + " 分";
+  document.getElementById("resultCorrect").textContent =
+    `${correct} / ${total}`;
+  document.getElementById("resultUnanswered").textContent = unanswered;
+  document.getElementById("resultMessage").textContent =
+    score >= 90 ? "表現非常好，繼續保持！" :
+    score >= 60 ? "已經有不錯的基礎，再多練習幾次！" :
+    "別氣餒，檢討錯題後再挑戰一次！";
 
-  if (!wrongMode) {
-    const history = getStorage("studyflow_history", []);
-
-    history.unshift({
-      date:new Date().toLocaleString("zh-TW"),
-      total:quizQuestions.length,
-      answered:answered.length,
-      correct:correctCount,
-      rate,
-      early
-    });
-
-    saveStorage("studyflow_history", history.slice(0,100));
-  }
-
+  renderReview(results);
   updateDashboard();
-
-  $("review").classList.add("hidden");
-  showPage("result");
+  showPage("resultPage");
 }
 
-function showReview() {
-  const list = $("reviewList");
-  list.innerHTML = "";
+function saveWrongAnswers(results) {
+  const wrong = readStorage(STORAGE.wrong, {});
 
-  lastResults.forEach((item, index) => {
-    const div = document.createElement("div");
-    div.className = "review-item";
+  results.forEach(result => {
+    const q = result.question;
+    const key = makeQuestionKey(q);
 
-    const title = document.createElement("strong");
-    title.textContent =
-      `第 ${index + 1} 題：${item.question.question}`;
-
-    div.appendChild(title);
-
-    const status = document.createElement("p");
-
-    if (item.unanswered) {
-      status.textContent =
-        `未作答｜正確答案：${item.correct}`;
-      status.style.color = "var(--muted)";
-    } else if (item.isCorrect) {
-      status.textContent =
-        `你的答案：${item.selected}（答對）`;
-      status.style.color = "var(--green)";
+    if (result.isCorrect) {
+      delete wrong[key];
     } else {
-      status.textContent =
-        `你的答案：${item.selected}；正確答案：${item.correct}`;
-      status.style.color = "var(--red)";
+      wrong[key] = q;
     }
-
-    div.appendChild(status);
-
-    const explanation = document.createElement("p");
-    explanation.className = "muted";
-    explanation.textContent =
-      item.question.explanation || "原始題庫未提供解析。";
-
-    div.appendChild(explanation);
-    list.appendChild(div);
   });
 
-  $("review").classList.remove("hidden");
+  writeStorage(STORAGE.wrong, wrong);
 }
 
-function questionKey(q) {
-  return `${q.subject || "統計學"}-${q.chapter || "Ch1"}-${q.id}`;
-}
+function renderReview(results) {
+  const area = document.getElementById("reviewArea");
+  area.innerHTML = "";
 
-function addWrongQuestion(q) {
-  const wrong = getStorage("studyflow_wrong", []);
-  const key = questionKey(q);
+  results.forEach((result,index) => {
+    const q = result.question;
+    const item = document.createElement("div");
+    item.className = "result-item " +
+      (result.isCorrect ? "correct" :
+       result.isUnanswered ? "unanswered" : "wrong");
 
-  if (!wrong.some(item => questionKey(item) === key)) {
-    wrong.push(q);
-    saveStorage("studyflow_wrong", wrong);
-  }
+    const status = result.isCorrect
+      ? '<span class="tag tag-green">答對</span>'
+      : result.isUnanswered
+        ? '<span class="tag tag-gray">未作答</span>'
+        : '<span class="tag tag-red">答錯</span>';
+
+    const optionsText = (q.options || []).map(option =>
+      `${option.value}. ${option.label}`
+    ).join("<br>");
+
+    item.innerHTML = `
+      <div style="display:flex;justify-content:space-between;gap:10px">
+        <strong>第 ${index + 1} 題</strong>${status}
+      </div>
+      <p>${escapeHTML(q.question)}</p>
+      <div class="small muted">${optionsText}</div>
+      <p class="small">你的答案：${escapeHTML(result.userAnswer ?? "未作答")}</p>
+      <p class="small">正確答案：<strong style="color:#16a34a">${escapeHTML(result.correctAnswer)}</strong></p>
+      <p class="small">解析：${escapeHTML(q.explanation || "原始題庫未提供解析。")}</p>
+    `;
+
+    area.appendChild(item);
+  });
 }
 
 function showWrongBook() {
-  const wrong = getStorage("studyflow_wrong", []);
-  const list = $("wrongList");
-
-  list.innerHTML = "";
+  const wrong = Object.values(readStorage(STORAGE.wrong, {}));
+  const area = document.getElementById("wrongList");
+  area.innerHTML = "";
 
   if (!wrong.length) {
-    list.textContent = "目前還沒有錯題，繼續保持！";
+    area.innerHTML = '<p class="muted">目前還沒有錯題，繼續加油！</p>';
   } else {
-    wrong.forEach((q, index) => {
-      const div = document.createElement("div");
-      div.className = "review-item";
-
-      const title = document.createElement("strong");
-      title.textContent = `${index + 1}. ${q.question}`;
-
-      const answer = document.createElement("p");
-      answer.className = "muted";
-      answer.textContent = `正確答案：${q.answer}`;
-
-      div.append(title, answer);
-      list.appendChild(div);
+    wrong.forEach((q,index) => {
+      const item = document.createElement("div");
+      item.className = "result-item";
+      item.innerHTML = `
+        <strong>錯題 ${index + 1}｜題庫題號 ${escapeHTML(q.id)}</strong>
+        <p>${escapeHTML(q.question)}</p>
+        <p class="small muted">
+          正確答案：${escapeHTML(q.answer)}
+        </p>
+        <p class="small">解析：${escapeHTML(q.explanation || "原始題庫未提供解析。")}</p>
+      `;
+      area.appendChild(item);
     });
   }
+
+  const button = document.querySelector("#wrongPage .btn-primary");
+  button.disabled = wrong.length === 0;
 
   showPage("wrongPage");
 }
 
-function startWrongQuiz() {
-  const wrong = getStorage("studyflow_wrong", []);
-
-  if (!wrong.length) {
-    alert("目前沒有錯題可以練習！");
-    return;
-  }
-
-  quizQuestions = shuffle(wrong);
-  beginAttempt();
-  wrongMode = true;
-}
-
-function clearWrongBook() {
-  if (confirm("確定要清空所有錯題嗎？")) {
-    saveStorage("studyflow_wrong", []);
-    showWrongBook();
-  }
-}
-
 function showHistory() {
-  const history = getStorage("studyflow_history", []);
-  const list = $("historyList");
-
-  list.innerHTML = "";
+  const history = readStorage(STORAGE.history, []);
+  const area = document.getElementById("historyList");
+  area.innerHTML = "";
 
   if (!history.length) {
-    list.textContent = "目前還沒有測驗紀錄。";
+    area.innerHTML = '<p class="muted">目前沒有測驗紀錄。</p>';
   } else {
-    history.forEach((item, index) => {
-      const div = document.createElement("div");
-      div.className = "review-item";
-
-      div.textContent =
-        `${index + 1}. ${item.date}｜` +
-        `${item.correct}/${item.answered ?? item.total} 題答對｜` +
-        `正確率 ${item.rate}%` +
-        (item.early ? "｜提前結束" : "");
-
-      list.appendChild(div);
+    history.forEach((record,index) => {
+      const item = document.createElement("div");
+      item.className = "result-item";
+      item.innerHTML = `
+        <strong>第 ${history.length - index} 次測驗</strong>
+        <p class="small muted">${escapeHTML(record.date)}</p>
+        <p>分數：<strong>${record.score} 分</strong></p>
+        <p class="small muted">
+          答對 ${record.correct} 題／共 ${record.total} 題，
+          未作答 ${record.unanswered} 題
+        </p>
+      `;
+      area.appendChild(item);
     });
   }
 
   showPage("historyPage");
 }
 
-function goHome() {
-  showPage("home");
+function clearHistory() {
+  if (!confirm("確定要清除所有測驗紀錄嗎？")) return;
+  localStorage.removeItem(STORAGE.history);
+  updateDashboard();
+  showHistory();
 }
 
-loadBank();
+function backToHome() {
+  updateDashboard();
+  checkDraft();
+  showPage("homePage");
+}
+
+function backToHomeFromQuiz() {
+  backToHome();
+}
+
+function backToHome() {
+  updateDashboard();
+  checkDraft();
+  showPage("homePage");
+}
+
+// 暫時離開：保留作答內容，下次可以繼續
+function backToHome() {
+  saveDraft();
+  updateDashboard();
+  checkDraft();
+  showPage("homePage");
+}
+
+loadQuestions();
 </script>
 </body>
 </html>
